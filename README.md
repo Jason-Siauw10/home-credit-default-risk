@@ -1,5 +1,5 @@
 # Home Credit Default Risk Prediction
-**Virtual Internship Experience — Rakamin Academy × Home Credit**
+**Virtual Internship Experience — Rakamin Academy × Home Credit Indonesia**
 
 ---
 
@@ -20,8 +20,8 @@ Home Credit serves customers who are underserved by traditional banking — peop
 home-credit-default-risk/
 ├── home_credit_default_risk.ipynb   ← Main notebook (full end-to-end pipeline)
 ├── submission.csv                   ← Final test set predictions
-├── README.md                        ← This file
-└── data/                            ← Not tracked (download from Kaggle)
+├── README.md                        
+└── data/                            
     ├── application_train.csv
     ├── application_test.csv
     ├── bureau.csv
@@ -37,7 +37,7 @@ home-credit-default-risk/
 
 ## Dataset
 
-Source: [Home Credit Default Risk — Kaggle](https://www.kaggle.com/c/home-credit-default-risk)
+Dataset provided as part of the **Rakamin Academy Virtual Internship Experience** in collaboration with **Home Credit Indonesia**.
 
 | Table | Rows (approx) | Description |
 |---|---|---|
@@ -128,7 +128,7 @@ At decision threshold = 0.5, per 100,000 annual applications:
    cd home-credit-default-risk
    ```
 
-2. **Download the data** from [Kaggle](https://www.kaggle.com/c/home-credit-default-risk/data) and place all CSV files in a `data/` folder (or the same directory as the notebook).
+2. **Place the dataset files** in the same directory as the notebook (or a `data/` subfolder — update `DATA_DIR` at the top of the notebook accordingly).
 
 3. **Install dependencies**
    ```bash
@@ -141,13 +141,12 @@ At decision threshold = 0.5, per 100,000 annual applications:
    ```bash
    jupyter notebook home_credit_default_risk.ipynb
    ```
-   > Update `DATA_DIR` at the top of the notebook if your CSVs are in a subfolder.
 
 ---
 
 ## Key Findings
 
-1. **External credit scores dominate** — `EXT_MEAN` alone causes a 0.067 AUC drop when removed. Third-party credit history is the most informative signal available and cannot be replaced by internal data alone.
+1. **External credit scores dominate** — `EXT_MEAN` alone causes a 0.067 AUC drop when removed. Third-party credit history is the most informative signal and cannot be replaced by internal data alone.
 
 2. **Debt burden is actionable** — `CREDIT_ANNUITY_RATIO` ranks 2nd in permutation importance, directly confirming Insight 2. Home Credit controls this ratio at loan origination.
 
